@@ -20,8 +20,8 @@ If you can to allow the user to parameterize tests you can call the parameterSet
 You provide a set of parameter definitions which include the 'set' callback which is invoked if the user changes the value
 
 `
-if(typeof parameterSetup !== 'undefined' && parameterSetup ){
-  parameterSetup([
+  if(typeof parameterSetup !== 'undefined' && parameterSetup ){
+   parameterSetup([
       {
         name: 'parameter1',
         value: 'parameter1value',
