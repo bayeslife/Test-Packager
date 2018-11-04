@@ -1,0 +1,56 @@
+{
+  "name": "test-packager",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/bluebird": "^3.5.8",
+    "@types/handlebars": "^4.0.35",
+    "@types/node": "^7.0.13",
+    "bluebird": "^3.5.0",
+    "browserify": "^16.2.3",
+    "camel-case": "^3.0.0",
+    "change-case": "^3.0.2",
+    "file-saver": "^1.3.8",
+    "gulp-strip-comments": "^2.5.2",
+    "handlebars": "^4.0.11",
+    "marked": "^0.3.19",
+    "mocha": "^5.2.0",
+    "param-case": "^2.1.1",
+    "pascal-case": "^2.0.1",
+    "setimmediate": "^1.0.5",
+    "testistic-mocha-reporter": "^1.0.6",
+    "typescript": "^3.1.2"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "index.js",
+        "src",
+        "test"
+      ]
+    }
+  },
+  "devDependencies": {
+    "d3": "^5.7.0",
+    "gulp": "^3.9.1",
+    "gulp-insert": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.2",
+    "gulp-tap": "^1.0.1",
+    "merge-stream": "^1.0.1",
+    "nodemon": "^1.18.5",
+    "pn": "^1.1.0",
+    "through2": "^2.0.3"
+  },
+  "scripts": {
+    "package": " ./node_modules/browserify/bin/cmd.js -o build/lib.prestrip.js index.js && gulp strip",
+    "compile": "tsc --lib ES5,ES2015.Collection",
+    "generate": "DEBUG=* gulp build",
+    "clean": "rm -rf node_modules && rm -rf dist/* rm -rf build/*",
+    "test": "./node_modules/mocha/bin/mocha --recursive",
+    "start": "./node_modules/.bin/nodemon --watch index.js --watch src --watch test --exec 'npm run compile && npm run package && npm run generate'"
+  },
+  "author": "",
+  "license": "ISC"
+}

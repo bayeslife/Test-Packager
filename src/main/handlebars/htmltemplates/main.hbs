@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Test Packager</title>
+  <style>{{> ../../css/mocha.css}}</style>
+</head>
+<body>
+  <div class="container">
+
+  <h1>Packaged Tests</h1>
+
+  Version {{version}} |
+
+    <div id="parameters"></div>
+    <div id="controls">
+        <input type="button"onclick="runtest()" value="Run Test"></input>
+    </div>
+    <div id="mocha"></div>
+
+    <script type="text/javascript">
+      {{> ../../../../build/lib.js}}
+    </script>
+
+</div>
+</body>
+</html>
