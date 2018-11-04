@@ -19,7 +19,7 @@ You can send the html to a colleague and by opening up the html page they can ru
 If you can to allow the user to parameterize tests you can call the parameterSetup function in your test.
 You provide a set of parameter definitions which include the 'set' callback which is invoked if the user changes the value
 
-`
+```javascript
   if(typeof parameterSetup !== 'undefined' && parameterSetup ){
    parameterSetup([
       {
@@ -38,7 +38,7 @@ You provide a set of parameter definitions which include the 'set' callback whic
       }
     ])
   }
-`
+```
 
 ### Known Limitations
 
