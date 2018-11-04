@@ -20,4 +20,4 @@ mocha.setup('bdd');
 
 mocha.checkLeaks();
 
-require('./test/sample.spec.js')
+require('./package.js')
